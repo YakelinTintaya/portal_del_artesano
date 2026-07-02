@@ -53,13 +53,6 @@ function respuesta2(){
     alert("Excelente. Mantener hábitos saludables fortalece tu bienestar y tu futuro.");
 }
 
-function reproducirConsejo(){
-    alert("Escucha este consejo y reflexiona sobre tus decisiones.");
-    document.getElementById("audio").play();
-}
-
-
-
 /* MENU MOVIL */
 function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");

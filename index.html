@@ -152,21 +152,55 @@
 
 <section class="ayuda" id="ayuda">
     <h2>¿Necesitas ayuda?</h2>
-    <img src="img/ayuda.jpg" alt="">
-    <p>Hablar con alguien es el primer paso para cambiar.</p>
+    <p> Mira este mensaje:</p>
 
-    <button onclick="reproducirConsejo()"> Escuchar consejo </button>
+    <div class="contenedor-tiktok">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mp1111111111e/video/7652858884620586261" data-video-id="7652858884620586261" style="max-width: 605px; min-width: 325px;">
+            <section>
+                <a target="_blank" title="@mp1111111111e" href="https://www.tiktok.com/@mp1111111111e?refer=embed">@mp1111111111e</a>
+                <p>Tu futuro vale más que una botella. ¡Busca ayuda!</p>
+            </section>
+        </blockquote>
+    </div>
 
-    <audio id="audio">
-        <source src="audio/consejo.mp3" type="audio/mpeg">
-    </audio>
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </section>
 
 <footer>
-    <p>Uni-Sano  | Tu futuro vale más que una botella</p>
+    <div class="contenido-footer">
+        <div class="footer-logo-uni">
+            <img src="https://www.dehuancayo.com/index.php?view=image&format=raw&type=orig&id=284&Itemid=117&option=com_joomgallery" alt="Logo Universidad">
+        </div>
+
+        <div class="footer-lema">
+            <p><strong>Uni-Sano</strong> | Tu futuro vale más que una botella</p>
+        </div>
+        
+        <div class="footer-integrantes">
+            <span><strong>Integrantes:</strong></span>
+            <ul>
+                <li>Yakelin Tintaya </li>
+                <li>Cristiana Adriano Tito</li>
+                <li>Luis Fernando Quispetito</li>
+                <li>Laura Alessandra Velasco</li>
+            </ul>
+        </div>
+    </div>
 </footer>
 
 <script src="script.js"></script>
+
+<div class="botones-flotantes">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScRXyfCnI0dvraZgFj2kwmhGd9rSV3F9pKy_jXCuL1jgGwZVw/viewform" target="_blank" class="btn-flotante cita">
+        <span class="texto-btn">Agendar Cita</span>
+        <div class="icono-btn">📅</div>
+    </a>
+    <a href="https://app.psicologoia.ai/chat" target="_blank" class="btn-flotante ia">
+        <span class="texto-btn">Asistente IA</span>
+        <div class="icono-btn">🤖</div>
+    </a>
+
+</div>
 
 </body>
 </html>

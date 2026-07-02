@@ -136,12 +136,76 @@ section{
     margin:20px 0;
     border-radius:20px;
 }
+footer {
+    background: #1E3A5F;
+    color: white;
+    padding: 40px 60px;
+    font-size: 15px;
+}
 
-footer{
-    background:#1E3A5F;
-    color:white;
-    text-align:center;
-    padding:20px;
+.contenido-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-logo-uni img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+}
+
+.footer-lema p {
+    font-size: 18px;
+    flex: 1;
+    min-width: 250px;
+    text-align: left; 
+}
+
+.footer-integrantes {
+    text-align: left;
+    min-width: 180px;
+}
+
+.footer-integrantes span {
+    display: block;
+    margin-bottom: 5px;
+    color: #E74C3C;
+}
+
+.footer-integrantes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-integrantes ul li {
+    margin-bottom: 3px;
+    opacity: 0.9;
+}
+
+/* Ajuste responsive para celulares */
+@media(max-width: 768px) {
+    footer {
+        padding: 30px 20px;
+    }
+    .contenido-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-lema p {
+        text-align: center;
+    }
+    .footer-integrantes {
+        text-align: center;
+    }
+    .footer-logo-uni {
+        margin-bottom: 10px; 
+    }
 }
 
 @media(max-width:768px){
@@ -218,6 +282,105 @@ footer{
     font-size:30px;
     color:white;
     cursor:pointer;
+}
+
+/* --- BOTONES FLOTANTES (AGENDAR CITA Y ASISTENTE IA) --*/
+.botones-flotantes {
+    position: fixed;
+    right: 20px;
+    bottom: 30px; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2000; 
+}
+
+.btn-flotante {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.05); 
+}
+
+/* El círculo del botón (la bolita) */
+.icono-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    border: 3px solid #FFFFFF; 
+    background: #E74C3C; 
+    z-index: 2;
+}
+
+/* El texto/nombre al lado del botón */
+.texto-btn {
+    background: #FFFFFF;
+    color: #1E3A5F; 
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: -10px;
+    padding-right: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    border: 2px solid #E74C3C; /* Borde rojo */
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.btn-flotante:hover .texto-btn {
+    opacity: 1;
+    background: #E74C3C;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+/* --- CONTENEDOR DE TIKTOK --- */
+.contenedor-tiktok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    max-width: 340px; /* Ancho ideal para emular el formato celular en la web */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Ajuste responsivo menor para pantallas pequeñas */
+@media(max-width: 400px) {
+    .contenedor-tiktok {
+        max-width: 100%;
+    }
+}
+/* Ajuste para pantallas móviles (para que no estorben demasiado) */
+@media(max-width: 768px) {
+    .botones-flotantes {
+        right: 10px;
+        bottom: 20px;
+    }
+    .icono-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .texto-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+        padding-right: 18px;
+    }
 }
 
 @media(max-width:768px){
