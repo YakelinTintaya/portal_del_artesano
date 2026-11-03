@@ -1,0 +1,96 @@
+/* global.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.img-logo {
+    height: 55px; 
+    width: auto;
+    display: block;
+
+}
+body {
+    background-color: #F8F5F0;
+    color: #333333;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Banner superior */
+.top-banner {
+    background-color: #2D2D2D;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+}
+
+/* Encabezado */
+header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.logo {
+    background-color: #E0E0E0;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333333;
+}
+
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.buscar input {
+    padding: 5px 10px;
+}
+
+/* Botón simple */
+.btn-comprar {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+    background-color: #4A4A4A;
+    color: #ffffff;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+}
+/* Avisos (mensajes flash) */
+.aviso { padding: 10px 30px; font-size: 14px; text-align: center; }
+.aviso-ok { background: #e6f4ea; color: #1e6b34; }
+.aviso-error { background: #fdecea; color: #a12622; }
+
+/* Botón con aspecto de enlace (para "Salir") */
+.link-boton { background: none; border: 0; cursor: pointer; font-size: inherit; color: #333; margin: 0 10px; }
+.link-boton:hover { text-decoration: underline; }

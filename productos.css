@@ -1,0 +1,63 @@
+/* productos.css */
+@import url('global.css');
+
+.tienda-layout {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.filtros {
+    width: 20%;
+}
+
+.filtros select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.contenido-tienda {
+    width: 80%;
+}
+
+.botones-pildora {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-pildora {
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.btn-pildora.active {
+    background: #C49A6C;
+    color: #fff;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.producto-caja {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.producto-caja img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+/* Las pastillas ahora son enlaces <a> (antes eran <button>) */
+a.btn-pildora { text-decoration: none; color: #333; display: inline-block; font-size: 13px; }
+a.btn-pildora.active { color: #fff; }
