@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Portal del Artesano | Comercio Justo & Dropshipping Cusco')</title>
-    <meta name="description" content="Plataforma de comercio electrónico y showrooming con impacto social. Conectamos directamente a los artesanos de Cusco (San Blas, Pisac, Chinchero, San Pedro) con compradores internacionales, respaldados por el HUB logístico de certificación digital.">
+    <meta name="description" content="@yield('meta_description', 'Plataforma de comercio electrónico y showrooming con impacto social. Conectamos directamente a los artesanos de Cusco (San Blas, Pisac, Chinchero, San Pedro) con compradores internacionales, respaldados por el HUB logístico de certificación digital.')">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="google-site-verification" content="googlea031ed47a730fcf4">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Metadatos Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portal del Artesano Cusco">
+    <meta property="og:title" content="@yield('title', 'Portal del Artesano | Comercio Justo & Dropshipping Cusco')">
+    <meta property="og:description" content="@yield('meta_description', 'Conectamos a artesanos cusqueños con el mundo con autenticidad certificada y comercio justo.')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="@yield('meta_image', asset('images/og-cover.jpg'))">
+
+    <!-- Metadatos Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', 'Portal del Artesano Cusco')">
+    <meta name="twitter:description" content="@yield('meta_description', 'Arte tradicional andino auténtico certificado directamente desde los talleres de Cusco.')">
+    <meta name="twitter:image" content="@yield('meta_image', asset('images/og-cover.jpg'))">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) para Google Search -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
+        "name": "Portal del Artesano Cusco",
+        "url": "{{ url('/') }}",
+        "description": "Showrooming y comercio justo directo de piezas artesanales de Cusco al mundo",
+        "potentialAction": {
+            "@@type": "SearchAction",
+            "target": "{{ route('catalogo.index') }}?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
 
     <!-- Tipografía optimizada y estilos modulares (con cache busting) -->
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">

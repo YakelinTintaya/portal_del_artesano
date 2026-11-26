@@ -20,6 +20,11 @@ Route::get('/', [ProductoController::class, 'home'])->name('home');
 Route::get('/catalogo', [ProductoController::class, 'index'])->name('catalogo.index');
 Route::get('/catalogo/{id}', [ProductoController::class, 'show'])->name('catalogo.show');
 Route::get('/dedicatoria/{id_o_codigo}', [PedidoController::class, 'dedicatoria'])->name('pedidos.dedicatoria');
+Route::get('/sitemap.xml', function () {
+    $productos = \App\Models\Producto::aprobados()->latest('updated_at')->get();
+    return response()->view('sitemap', compact('productos'))
+        ->header('Content-Type', 'application/xml; charset=utf-8');
+})->name('sitemap');
 
 /*
 |--------------------------------------------------------------------------
